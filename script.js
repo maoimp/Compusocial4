@@ -39,3 +39,23 @@ let vector = [12, 45, 67, 23, 89, 34, 56, 78, 90, 12];
     for (let i = 0; i < vector.length; i++) {
         console.log("Posición " + i + ": " + vector[i]);
     }
+
+
+    function convertirPolarACartesiana(r, angulo) {
+        // Convertir el ángulo a radianes
+        let anguloRadianes = angulo * (Math.PI / 180);
+        
+        // Calcular las coordenadas cartesianas
+        let x = r * Math.cos(anguloRadianes);
+        let y = r * Math.sin(anguloRadianes);
+        
+        return { x: x, y: y };
+    }
+    
+    // Ejemplo de uso:
+    let r = 5; // Módulo
+    let angulo = 30; // Ángulo en grados
+    
+    let vector1 = convertirPolarACartesiana(r, angulo);
+    console.log(`El vector en coordenadas cartesianas es: x = ${vector.x}, y = ${vector.y}`);
+    
